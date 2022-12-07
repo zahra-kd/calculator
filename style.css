@@ -6,21 +6,46 @@
 body {
     background-color: black;
 }
-#calculator{
+#calculator_container{
     margin: 30px auto 0px auto;
     width: 400px;
     border-radius: 10px;
     background-color: rgb(39, 39, 39);
     padding: 20px;
+    position: relative;
 }
-#output {
+#output_screen {
     width: 100%;
     height: 100px;
     background-color: white;
     margin-bottom: 20px;
+    padding: 20px;
     border-radius: 10px;
 }
-.btn_container {
+.fa-clock-rotate-left {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+#result_history {
+    width: 70%;
+    height: 200px;
+    position: absolute;
+    top: 45px;
+    right: 30px;
+    padding: 10px;
+    color: white;
+    background-color: rgb(39, 39, 39);
+    border-radius: 10px;
+    display: none;
+    overflow-y: scroll;
+}
+
+#btn_container {
     display: grid;
     gap: 20px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -36,3 +61,4 @@ body {
 .btn:hover {
     background-color: rgb(192, 188, 184);
 }
+
